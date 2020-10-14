@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Badge = styled.a`
   transition: 0.2s;
   :hover {
-    transform: scale(1.2) rotate(10deg);
+    transform: ${()=>`scale(1.2) rotate(${Math.random()*40-20}deg)`};
   }
 `
 
