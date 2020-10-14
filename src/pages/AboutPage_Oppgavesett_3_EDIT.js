@@ -10,7 +10,7 @@ const Badge = styled.a`
   }
 `
 
-const BadgeImage = styled.img
+const BadgeImage = styled.img``
 
 const AboutPage = () => {
   var mysteryHeaders = [
