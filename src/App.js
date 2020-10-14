@@ -20,7 +20,7 @@ const App = () => {
           setPokemonSelected={setPokemonSelected}
         />
         <AboutPage Label={"About Pokemon4Cash"} />
-        <MarketingPage Label={"Marketing"} />
+        <MarketingPage Label={"Marketing"} setValue={setValue} />
       </SimpleTabs>
       <Footer />
     </div>

@@ -3,11 +3,11 @@ export const loadPokemon = async (data, searchTerm, pokeInfo) => {
     data.map(async (pokemon) => {
       let pokemonRecord = await getPokemon(pokemon);
       return pokemonRecord;
-    }),
+    })
   );
 
   const results = pokeInfo.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(searchTerm),
+    pokemon.name.toLowerCase().includes(searchTerm)
   );
   if (searchTerm.length) {
     return results;
@@ -46,7 +46,7 @@ export const fetchSuggested = (setPokemonArray, type) => {
   fetch(`https://pokeapi.co/api/v2/type/${type}`)
     .then((res) => res.json())
     .then((json) =>
-      loadPokemon(json.pokemon.map((e) => e.pokemon).slice(0, 7), '', []),
+      loadPokemon(json.pokemon.map((e) => e.pokemon).slice(0, 7), "", [])
     )
     .then((data) => setPokemonArray(data));
 };

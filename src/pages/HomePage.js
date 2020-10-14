@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { ImageTextComp } from '../components/ImageTextComponent';
-import pokeimg from '../resources/pokemon.png';
-import flop from '../resources/meowmagi.png';
-import banner from '../pics/Pokemonbanner.png'
-import '../styles/styles.css';
+import React, { useEffect, useState } from "react";
+import { ImageTextComp } from "../components/ImageTextComponent";
+import pokeimg from "../resources/pokemon.png";
+import flop from "../resources/meowmagi.png";
+import banner from "../pics/Pokemonbanner.png";
+import "../styles/styles.css";
 
 function HomePage(props) {
   const calculateTimeLeft = () => {
@@ -42,15 +42,13 @@ function HomePage(props) {
 
     timerComponents.push(
       <span key={i}>
-        {timeLeft[interval]} {interval}{' '}
-      </span>,
+        {timeLeft[interval]} {interval}{" "}
+      </span>
     );
   });
 
   return (
     <div className="App">
-     
-
       <h1>Hello Shopper!</h1>
       <div>
         <p>

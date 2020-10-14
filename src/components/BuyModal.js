@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import MeowthModal from './MeowthModal';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import MeowthModal from "./MeowthModal";
 
 function getModalStyle() {
   const top = 50;
@@ -11,18 +11,18 @@ function getModalStyle() {
     top: `${top}%`,
     left: `${left}%`,
     transform: `translate(-${top}%, -${left}%)`,
-    outline: 'none',
+    outline: "none",
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    fontFamily: 'Ubuntu',
-    position: 'absolute',
+    fontFamily: "Ubuntu",
+    position: "absolute",
     width: 400,
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    borderRadius: '20px',
+    border: "2px solid #000",
+    borderRadius: "20px",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -36,10 +36,10 @@ export default function SimpleModal(props) {
     <div style={modalStyle} className={classes.paper}>
       {props.giveMoneyToMeowthInstead ? (
         <div>
-          <h2 id="simple-modal-title" style={{ textAlign: 'center' }}>
+          <h2 id="simple-modal-title" style={{ textAlign: "center" }}>
             Congratulations! Here's your {props.pokemonSelected.name}
           </h2>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             {props.card}
           </div>
         </div>

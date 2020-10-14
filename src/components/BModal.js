@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
-import BScreen from './BScreen';
-import '../resources/animations.css';
+import React, { useState } from "react";
+import Modal from "@material-ui/core/Modal";
+import BScreen from "./BScreen";
+import "../resources/animations.css";
 
 function getModalStyle() {
   const top = 50;
@@ -11,18 +11,18 @@ function getModalStyle() {
     top: `${top}%`,
     left: `${left}%`,
     transform: `translate(-${top}%, -${left}%)`,
-    position: 'absolute',
-    backgroundColor: '#FFF',
-    border: '2px solid #000',
-    outline: 'none',
+    position: "absolute",
+    backgroundColor: "#FFF",
+    border: "2px solid #000",
+    outline: "none",
   };
 }
 
 const BModal = (props) => {
   const [modalStyle] = useState(getModalStyle);
-  const pBattle = document.getElementById('pokemonbattle');
-  const pRunaway = document.getElementById('runaway');
-  const pVictory = document.getElementById('victory');
+  const pBattle = document.getElementById("pokemonbattle");
+  const pRunaway = document.getElementById("runaway");
+  const pVictory = document.getElementById("victory");
   pBattle.currentTime = 1;
   pRunaway.currentTime = 0.5;
   pVictory.currentTime = 0.5;
@@ -40,17 +40,17 @@ const BModal = (props) => {
     >
       <div
         style={{
-          width: '80vw',
-          height: '100vh',
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          backgroundColor: '#000',
-          outline: 'none',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          width: "80vw",
+          height: "100vh",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          backgroundColor: "#000",
+          outline: "none",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <BScreen

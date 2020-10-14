@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { getAllPokemon, loadPokemon } from '../service/GetPokemon';
-import PokeList from '../components/PokemonList';
-import Search from '../components/SearchHeader';
-import Loading from '../components/Loading';
-import BuyPage from './BuyPage_Oppgavesett_2_EDIT';
-import '../styles/searchstore.css';
+import React, { useState, useEffect } from "react";
+import { getAllPokemon, loadPokemon } from "../service/GetPokemon";
+import PokeList from "../components/PokemonList";
+import Search from "../components/SearchHeader";
+import Loading from "../components/Loading";
+import BuyPage from "./BuyPage_Oppgavesett_2_EDIT";
+import "../styles/searchstore.css";
 
 //Oppgave 1:
 //På search siden så ser vi kun en magikarp, kan dere liste ut alle 150 pokemons fra first generation?
 //Hint: https://pokeapi.co/docs/v2#resource-listspagination-section
 const StorePage = (props) => {
   //State
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [pokeInfo, setPokeInfo] = useState([]);
 
   //variable for URL
@@ -25,7 +25,7 @@ const StorePage = (props) => {
       let thePokeInfo = await loadPokemon(
         response.results,
         searchTerm,
-        pokeInfo,
+        pokeInfo
       );
       setPokeInfo(thePokeInfo);
     }
@@ -36,7 +36,7 @@ const StorePage = (props) => {
   //Her er en påbegynt søkefunksjon, kan dere fullføre denne?
   //Hint: Komponenten Search har en prop som heter handleChange
   function handleChange(e) {
-    setSearchTerm(e.target.value)
+    setSearchTerm(e.target.value);
   }
 
   //Oppgave 3:
@@ -46,7 +46,7 @@ const StorePage = (props) => {
     <div>
       {props.pokemonSelected.name ? (
         <BuyPage
-          Label={'Store'}
+          Label={"Store"}
           setPokemonSelected={props.setPokemonSelected}
           pokemonSelected={props.pokemonSelected}
         />

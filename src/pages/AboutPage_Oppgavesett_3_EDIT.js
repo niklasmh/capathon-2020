@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Magikarp from "../resources/flopping.jpg";
 import "../styles/aboutpagestyles.css";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Badge = styled.a`
   transition: 0.2s;
   :hover {
-    transform: ${()=>`scale(1.2) rotate(${Math.random()*40-20}deg)`};
+    transform: ${() => `scale(1.2) rotate(${Math.random() * 40 - 20}deg)`};
   }
-`
+`;
 
-const BadgeImage = styled.img``
+const BadgeImage = styled.img``;
 
 const AboutPage = () => {
   var mysteryHeaders = [
@@ -40,7 +40,7 @@ const AboutPage = () => {
   //            hvis man trykker på en badge.
   var badgeimages = badgeImageUrls.map((url) => {
     return (
-      <Badge href='https://pokemon.fandom.com/wiki/Gym_Badges' key={url}>
+      <Badge href="https://pokemon.fandom.com/wiki/Gym_Badges" key={url}>
         <BadgeImage src={url} alt="new" className="badge-image" />
       </Badge>
     );
@@ -53,28 +53,32 @@ const AboutPage = () => {
     {
       name: "Hanne Kyllo Ødegård",
       position: "Developer",
-      favPokemon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+      favPokemon:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
       imgUrl:
         "https://avatars0.githubusercontent.com/u/44879629?s=460&u=338eb4a5f92af34e0f61d7e5f60c27a04c43ff28&v=4",
     },
     {
       name: "Chris Pillai Johnson",
       position: "Tester",
-      favPokemon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+      favPokemon:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
       imgUrl:
         "https://scontent.fosl3-1.fna.fbcdn.net/v/t1.0-9/72314962_2383764858337970_5515805625264635904_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=h9Mp2AGRQWMAX90-rsL&_nc_ht=scontent.fosl3-1.fna&oh=0c5ce29b056a8ca66c0c73d481b872db&oe=5FAAFBD3",
     },
     {
       name: "Eirik Midtun",
       position: "Project leader",
-      favPokemon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      favPokemon:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
       imgUrl:
         "https://scontent.fosl3-2.fna.fbcdn.net/v/t1.0-9/38801554_1464074583693882_1238471386217840640_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=Jw1WoRi4Mz0AX87D52r&_nc_ht=scontent.fosl3-2.fna&oh=97c583279f1c1137a894417dcd8a91e4&oe=5FAD1A7E",
     },
     {
       name: "Niklas Molnes Hole",
       position: "Developer",
-      favPokemon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+      favPokemon:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
       imgUrl:
         "https://scontent.fosl3-1.fna.fbcdn.net/v/t1.15752-9/117159019_302190144169984_8996085123963486804_n.jpg?_nc_cat=108&_nc_sid=ae9488&_nc_ohc=b1kRoL5h0vIAX9ikVYp&_nc_ht=scontent.fosl3-1.fna&oh=b3605fa5d35126082a4e1c7ffc895016&oe=5FABE2F6",
     },
@@ -83,28 +87,34 @@ const AboutPage = () => {
   // Oppgave 5: Lag en funksjon som returnerer et ansatt-kort for hvert teammedlem i listen "consultants"
   // Hint: Se på kortene som allerede er laget for ledelsen i Pokémon4Cash.
   // Oppgave 6: Style baksiden av ansattkortene slik dere selv mener de bør være stylet
-  let consultantCards = consultants.map(({name, position, imgUrl, favPokemon}) => {
-    return (
-      <div className="flip-card">
+  let consultantCards = consultants.map(
+    ({ name, position, imgUrl, favPokemon }) => {
+      return (
+        <div className="flip-card">
           <div className="flip-card-inner">
-            <div className="flip-card-front" style={{overflow:"hidden"}}>
+            <div className="flip-card-front" style={{ overflow: "hidden" }}>
               <img
                 src={imgUrl}
                 alt="new"
                 className="flip-card-image"
-                style={{objectFit:"cover",height:"100%"}}
+                style={{ objectFit: "cover", height: "100%" }}
               />
             </div>
-            <div className="flip-card-back" >
+            <div className="flip-card-back">
               <h1>{name}</h1>
-              <img alt="favorite" src={favPokemon} style={{objectFit:"contain"}} />
+              <img
+                alt="favorite"
+                src={favPokemon}
+                style={{ objectFit: "contain" }}
+              />
               <h2>{position}</h2>
             </div>
           </div>
         </div>
-    );
-  });
-   // = *Funksjon som returnerer et ansattkort for hvert objekt i consultants*
+      );
+    }
+  );
+  // = *Funksjon som returnerer et ansattkort for hvert objekt i consultants*
 
   const [showMagik, setShowMagik] = useState(false);
 
@@ -158,22 +168,27 @@ const AboutPage = () => {
                 className="flip-card-image"
               />
             </div>
-            <div className="flip-card-back" onClick={() => {setShowMagik(!showMagik)}}>
-            {!showMagik ?
-              <React.Fragment>
-                <h1>Brock</h1>
-                <h2>Trainer</h2>
-              </React.Fragment>
-              :
-              <React.Fragment>
-                <img
-                src={Magikarp}
-                style={{ objectFit: "contain" }}
-                alt="Fish in a barrel" 
-                title="The secret word is: UGFsbGV0IFRvd24="
-                />
-              </React.Fragment>
-              }
+            <div
+              className="flip-card-back"
+              onClick={() => {
+                setShowMagik(!showMagik);
+              }}
+            >
+              {!showMagik ? (
+                <React.Fragment>
+                  <h1>Brock</h1>
+                  <h2>Trainer</h2>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <img
+                    src={Magikarp}
+                    style={{ objectFit: "contain" }}
+                    alt="Fish in a barrel"
+                    title="The secret word is: UGFsbGV0IFRvd24="
+                  />
+                </React.Fragment>
+              )}
             </div>
           </div>
         </div>

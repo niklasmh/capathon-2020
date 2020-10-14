@@ -1,13 +1,13 @@
-import React from 'react';
-import '../styles/styles.css';
+import React from "react";
+import "../styles/styles.css";
 
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 // import Typography from "@material-ui/core/Typography";
-import Box from '@material-ui/core/Box';
-import PokeLogo from '../pics/logotest.png';
+import Box from "@material-ui/core/Box";
+import PokeLogo from "../pics/logotest.png";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -27,22 +27,22 @@ function TabPanel(props) {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontFamily: 'Ubuntu',
+    fontFamily: "Ubuntu",
     flexGrow: 1,
   },
 }));
 
 const ColorAppBar = withStyles((theme) => ({
   root: {
-    backgroundColor: '#2B0A3D',
-    color: '#ffffff',
-    fontSize: '18px',
+    backgroundColor: "#2B0A3D",
+    color: "#ffffff",
+    fontSize: "18px",
   },
 }))(AppBar);
 
@@ -64,9 +64,9 @@ const SimpleTabs = ({ value, setValue, children }) => {
           src={PokeLogo}
           alt="$$$$pokemons4cash$$$$"
           style={{
-            position: 'absolute',
-            height: '100px',
-            marginBottom: '30px',
+            position: "absolute",
+            height: "100px",
+            marginBottom: "30px",
           }}
         />
 
@@ -75,15 +75,15 @@ const SimpleTabs = ({ value, setValue, children }) => {
           onChange={handleChange}
           aria-label="simple tabs"
           style={{
-            height: '100px',
+            height: "100px",
           }}
           centered
         >
           {[children].flat().map((e, i) => (
             <Tab
               style={{
-                marginTop: '44px',
-                height: '46px',
+                marginTop: "44px",
+                height: "46px",
               }}
               key={i}
               label={e.props.Label}

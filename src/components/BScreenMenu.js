@@ -1,7 +1,7 @@
-import React from 'react';
-import BScreenMessage from './BScreenMessage';
-import BScreenMenuList from './BScreenMenuList';
-import '../resources/battle.css';
+import React from "react";
+import BScreenMessage from "./BScreenMessage";
+import BScreenMenuList from "./BScreenMenuList";
+import "../resources/battle.css";
 
 const phases = (props) => {
   console.log(props);
@@ -9,15 +9,15 @@ const phases = (props) => {
     case 0:
       return (
         <BScreenMessage
-          firstLine={'Wild MEOWTH'}
-          secondLine={'appeared!'}
+          firstLine={"Wild MEOWTH"}
+          secondLine={"appeared!"}
           setPhase={() => props.setPhase(1)}
         />
       );
     case 1:
       const lines =
         props.pokemonSelected.name.length < 9
-          ? [`Go! ${props.pokemonSelected.name.toUpperCase()}!`, '']
+          ? [`Go! ${props.pokemonSelected.name.toUpperCase()}!`, ""]
           : [`Go!`, `${props.pokemonSelected.name.toUpperCase()}!`];
       return (
         <BScreenMessage
@@ -61,17 +61,17 @@ const BScreenMenu = (props) => (
   <div
     className="poke-borders disable-5s"
     style={{
-      display: 'flex',
+      display: "flex",
       borderImageSource: 'url("/pokeborder.png")',
-      borderImageSlice: '55',
-      flexShrink: '0',
-      height: '12vw',
-      fontSize: '2.2vw',
-      lineHeight: '5vw',
-      backgroundColor: '#ffeeff',
-      margin: '0px 10px',
-      letterSpacing: '1vw',
-      justifyContent: 'flex-end',
+      borderImageSlice: "55",
+      flexShrink: "0",
+      height: "12vw",
+      fontSize: "2.2vw",
+      lineHeight: "5vw",
+      backgroundColor: "#ffeeff",
+      margin: "0px 10px",
+      letterSpacing: "1vw",
+      justifyContent: "flex-end",
     }}
   >
     {phases(props)}

@@ -7,7 +7,7 @@ function MarketingPage(props) {
     <div className="poster-container">
       <img src={Poster} alt="flyer"></img>
     </div>
-  )
+  );
 }
 
 export default MarketingPage;

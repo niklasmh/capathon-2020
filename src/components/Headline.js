@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const Headline = () => (
   <div>
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"
       alt="Pokemon"
-      style={{ width: '350px', alignItem: 'center' }}
-    ></img>{' '}
+      style={{ width: "350px", alignItem: "center" }}
+    ></img>{" "}
     <h1
       style={{
-        display: 'inline',
-        fontSize: '100px',
-        color: '#3D7DCA',
-        textShadow: '2px 2PX #003A70',
+        display: "inline",
+        fontSize: "100px",
+        color: "#3D7DCA",
+        textShadow: "2px 2PX #003A70",
       }}
     >
       - 4cash
