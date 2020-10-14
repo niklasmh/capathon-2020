@@ -51,19 +51,25 @@ const AboutPage = () => {
   //            som json-objekter i listen "consultants"
   var consultants = [
     {
-      name: "Consultant 1",
+      name: "Hanne Ødegård",
       position: "Developer",
       imgUrl:
-        "https://www.pngkit.com/png/detail/62-623222_pokemon-png-pack-ash-ketchum.png",
+        "https://scontent.fosl3-2.fna.fbcdn.net/v/t1.0-9/34070316_1766009890159779_6558128303205515264_o.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=PLjzUkP9wWQAX_39P13&_nc_ht=scontent.fosl3-2.fna&oh=85ad731edb069f91bdaed7b130c24447&oe=5FAD5C21",
     },
     {
-      name: "Consultant 2",
+      name: "Chris Johnson",
       position: "Tester",
       imgUrl:
         "https://www.clipartkey.com/mpngs/m/8-88479_pokemon-misty-png.png",
     },
     {
-      name: "Consultant 3",
+      name: "Eirik Midtun",
+      position: "Project leader",
+      imgUrl:
+        "https://www.kindpng.com/picc/m/253-2533471_brock-pokemon-png-transparent-png.png",
+    },
+    {
+      name: "Niklas Molnes Hole",
       position: "Project leader",
       imgUrl:
         "https://www.kindpng.com/picc/m/253-2533471_brock-pokemon-png-transparent-png.png",
@@ -73,7 +79,26 @@ const AboutPage = () => {
   // Oppgave 5: Lag en funksjon som returnerer et ansatt-kort for hvert teammedlem i listen "consultants"
   // Hint: Se på kortene som allerede er laget for ledelsen i Pokémon4Cash.
   // Oppgave 6: Style baksiden av ansattkortene slik dere selv mener de bør være stylet
-  let consultantCards; // = *Funksjon som returnerer et ansattkort for hvert objekt i consultants*
+  let consultantCards = consultants.map(({name, position, imgUrl}) => {
+    return (
+      <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img
+                src={imgUrl}
+                alt="new"
+                className="flip-card-image"
+              />
+            </div>
+            <div className="flip-card-back">
+              <h1>{name}</h1>
+              <h2>{position}</h2>
+            </div>
+          </div>
+        </div>
+    );
+  });
+   // = *Funksjon som returnerer et ansattkort for hvert objekt i consultants*
 
   const [showMagik, setShowMagik] = useState(false);
 
