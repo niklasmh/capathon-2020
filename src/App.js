@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SimpleTabs from "./components/Tabs";
 import Footer from "./Footer";
 import HomePage from "./pages/HomePage";
+import MarketingPage from "./pages/MarketingPage";
 import Store from "./pages/StorePage_Oppgavesett_1_EDIT";
 import AboutPage from "./pages/AboutPage_Oppgavesett_3_EDIT";
 import "./styles/styles.css";
@@ -19,6 +20,7 @@ const App = () => {
           setPokemonSelected={setPokemonSelected}
         />
         <AboutPage Label={"About Pokemon4Cash"} />
+        <MarketingPage Label={"Marketing"} />
       </SimpleTabs>
       <Footer />
     </div>
