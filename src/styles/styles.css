@@ -10,8 +10,8 @@ html {
 }
 
 @font-face {
-  font-family: 'PKMN';
-  src: url('/PKMN.ttf');
+  font-family: "PKMN";
+  src: url("/PKMN.ttf");
 }
 .app-wrapper {
   height: 100vh;
@@ -107,4 +107,8 @@ html {
 
 .paragraphContainer p {
   margin: 20px;
+}
+
+.poster-container {
+  text-align: center;
 }
