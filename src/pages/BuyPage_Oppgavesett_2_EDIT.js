@@ -26,8 +26,19 @@ const BuyPage = (props) => {
   const [pokemonAbilities, setPokemonAbilities] = useState([]);
   const [open, setOpen] = useState(false);
   const [pokemonArray, setPokemonArray] = useState([]);
+  var stat_name;
+  var stat_value;
   // OPPGAVE 1
   const pokemonStats = () => {
+    const stat_list = [];
+    for (let i = 0; i < 6; i++) {
+      stat_name = pokemonArray[0]?.stats[i].stat.name;
+      stat_value = pokemonArray[0]?.stats[i].base_stat;
+      console.log(stat_name, stat_value)
+      //stat_list.push(stat_name, ":", stat_value);
+    }
+    //setPokemonArray(stat_list);
+    //console.log(pokemonArray[0]?.stats[0].stat.name, ":", pokemonArray[0]?.stats[0].base_stat)
     /* 
     Vi har fått beskjed fra brukere at stats bare viser ? i GUI.
     Kan dere fikse at riktig stat blir vist? 
@@ -53,10 +64,11 @@ const BuyPage = (props) => {
 
   // OPPGAVE 2
   const buyPokemon = () => {
+    
     /* Vi får rapporter fra brukere at de gir penger til Meowth 
     istede for å kjøpe pokemons når de trykker 'BUY POKEMON', 
     dette MÅ vi fikse */
-    return false;
+    return true;
   };
 
   // OPPGAVE 3
