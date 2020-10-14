@@ -34,7 +34,6 @@ const BuyPage = (props) => {
     for (let i = 0; i < 6; i++) {
       stat_name = props.pokemonSelected.stats[i].stat.name;
       stat_value = props.pokemonSelected.stats[i].base_stat;
-      console.log(stat_name, stat_value);
     }
     //console.log(pokemonArray[0]?.stats[0].stat.name, ":", pokemonArray[0]?.stats[0].base_stat)
     /* 
