@@ -5,7 +5,7 @@ import Poster from "../pics/poster.png";
 function MarketingPage(props) {
   return (
     <div className="poster-container">
-      <img src={Poster}></img>
+      <img src={Poster} alt="flyer"></img>
     </div>
   )
 }
