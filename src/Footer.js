@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./pics/pokelogo.jpg";
+import Logo from "./pics/logotest.png";
 
 const Footer = () => {
   return (
