@@ -29,7 +29,7 @@ const StorePage = (props) => {
       setPokeInfo(thePokeInfo);
     }
     fetchData();
-  }, [searchTerm]);
+  }, [searchTerm, initialURL, pokeInfo]);
 
   //Oppgave 2:
   //Her er en påbegynt søkefunksjon, kan dere fullføre denne?

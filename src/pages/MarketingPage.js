@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import '../styles/styles.css';
 import Poster from "../pics/poster.png";
 

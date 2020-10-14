@@ -30,12 +30,10 @@ const BuyPage = (props) => {
   var stat_value;
   // OPPGAVE 1
   const pokemonStats = () => {
-    const stat_list = [];
     for (let i = 0; i < 6; i++) {
       stat_name = props.pokemonSelected.stats[i].stat.name;
       stat_value = props.pokemonSelected.stats[i].base_stat;
       console.log(stat_name, stat_value)
-      //stat_list.push(stat_name, ":", stat_value);
     }
     //console.log(pokemonArray[0]?.stats[0].stat.name, ":", pokemonArray[0]?.stats[0].base_stat)
     /* 
@@ -76,18 +74,6 @@ const BuyPage = (props) => {
     return true;
   };
 
-  // OPPGAVE 3
-  const suggestedPokemons = () => {
-    /* De foreslåtte pokemonene er alltid 'normal' type,
-    vi vil at de foreslåtte pokemonene skal være relatert
-    til pokemonen valgt. Bruk informasjonen tilgjengelig om den
-    valgte pokemonen for å lage bedre forslag for brukeren.
-    foreksempel gress til gress pokemon osv. */
-    const type = props.pokemonSelected.types[0].type.name
-    fetchSuggested(setPokemonArray, type);
-
-  };
-
   /* BONUS OPPGAVE */
   // Legg til en Loading spinner som dere kan lage eller laste inn
   // selv og legg til der data bruker tid før det vises. Foreksempel
@@ -98,6 +84,16 @@ const BuyPage = (props) => {
       props.pokemonSelected.abilities[0].ability.url,
       setPokemonAbilities,
     );
+    // OPPGAVE 3
+    const suggestedPokemons = () => {
+      /* De foreslåtte pokemonene er alltid 'normal' type,
+      vi vil at de foreslåtte pokemonene skal være relatert
+      til pokemonen valgt. Bruk informasjonen tilgjengelig om den
+      valgte pokemonen for å lage bedre forslag for brukeren.
+      foreksempel gress til gress pokemon osv. */
+      const type = props.pokemonSelected.types[0].type.name
+      fetchSuggested(setPokemonArray, type);
+    };
     suggestedPokemons();
   }, [props.pokemonSelected.abilities, props.pokemonSelected.types]);
 
