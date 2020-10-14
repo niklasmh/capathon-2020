@@ -40,7 +40,7 @@ const AboutPage = () => {
   //            hvis man trykker på en badge.
   var badgeimages = badgeImageUrls.map((url) => {
     return (
-      <Badge>
+      <Badge href='https://pokemon.fandom.com/wiki/Gym_Badges' key={url}>
         <BadgeImage src={url} alt="new" className="badge-image" />
       </Badge>
     );
