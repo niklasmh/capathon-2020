@@ -27,14 +27,8 @@ const BuyPage = (props) => {
   const [pokemonAbilities, setPokemonAbilities] = useState([]);
   const [open, setOpen] = useState(false);
   const [pokemonArray, setPokemonArray] = useState([]);
-  var stat_name;
-  var stat_value;
   // OPPGAVE 1
   const pokemonStats = () => {
-    for (let i = 0; i < 6; i++) {
-      stat_name = props.pokemonSelected.stats[i].stat.name;
-      stat_value = props.pokemonSelected.stats[i].base_stat;
-    }
     //console.log(pokemonArray[0]?.stats[0].stat.name, ":", pokemonArray[0]?.stats[0].base_stat)
     /* 
     Vi har fått beskjed fra brukere at stats bare viser ? i GUI.
