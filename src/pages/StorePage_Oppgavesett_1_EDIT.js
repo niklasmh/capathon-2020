@@ -14,8 +14,7 @@ const StorePage = (props) => {
   const [pokeInfo, setPokeInfo] = useState([]);
 
   //variable for URL
-
-  const initialURL = `https://pokeapi.co/api/v2/pokemon/?limit=1&offset=128`;
+  const initialURL = `https://pokeapi.co/api/v2/pokemon/?limit=150&offset=0`;
 
   //mount
   useEffect(() => {
