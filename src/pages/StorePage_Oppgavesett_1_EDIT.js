@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllPokemon, loadPokemon } from '../service/GetPokemon';
 import PokeList from '../components/PokemonList';
 import Search from '../components/SearchHeader';
+import Loading from '../components/Loading';
 import BuyPage from './BuyPage_Oppgavesett_2_EDIT';
 import '../styles/searchstore.css';
 
@@ -59,6 +60,7 @@ const StorePage = (props) => {
               pokemon4cash ready up the store
             </p>
           </div>
+          {pokeInfo.length ? null : <Loading />}
           <PokeList
             pokemon={pokeInfo}
             setPokemonSelected={props.setPokemonSelected}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getPokemonAbilities } from '../service/GetPokemon';
 import PokemonCard from '../components/PokemonCard_EDIT';
 import PokeInfoGrid from '../components/PokeInfoGrid';
+import Loading from '../components/Loading';
 
 import PokeList from '../components/PokemonList';
 import Button from '../components/Button';
@@ -78,6 +79,7 @@ const BuyPage = (props) => {
   // Legg til en Loading spinner som dere kan lage eller laste inn
   // selv og legg til der data bruker tid før det vises. Foreksempel
   // suggestedPokemons feltet eller ability feltet
+  // !Loading spinner er løst på linje 143
   useEffect(() => {
     window.scrollTo(0, 0);
     getPokemonAbilities(
@@ -138,6 +140,7 @@ const BuyPage = (props) => {
         <h2 style={{ margin: '25px' }}>
           Suggested other pokemon you might be intrested in:
         </h2>
+        {pokemonArray.length ? null : <Loading />}
         <PokeList
           pokemon={pokemonArray}
           setPokemonSelected={props.setPokemonSelected}
