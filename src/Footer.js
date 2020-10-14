@@ -20,14 +20,14 @@ const Footer = () => {
         <h3 style={{ marginLeft: "20px", marginTop: "-25px" }}>
           Gotta HACK'em all!
         </h3> */}
-        <img src={Logo} className="footer-logo" />
+        <img src={Logo} alt="Logo" className="footer-logo" />
       </div>
       <div>
         <img
           src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
           alt="Capgemini"
           style={{ paddingTop: "30px", marginLeft: "55%" }}
-        ></img>
+        />
       </div>
     </div>
   );

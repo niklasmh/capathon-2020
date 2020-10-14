@@ -23,7 +23,6 @@ function HomePage(props) {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const [year] = useState(new Date().getFullYear());
 
   useEffect(() => {
     const timer = setTimeout(() => {

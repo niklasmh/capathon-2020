@@ -6,7 +6,7 @@ import { MeowthJSON } from '../resources/Meowth';
 import index from '../resources/index.jpg';
 
 const BScreen = (props) => {
-  const [currentHP, setCurrentHP] = useState(
+  const [currentHP] = useState(
     props.pokemonSelected.stats[0].base_stat,
   );
   const [moves, setMoves] = useState([]);
@@ -40,7 +40,7 @@ const BScreen = (props) => {
     const fetchMoves = async () => {
       const fetchedMoves = await Promise.all(
         props.pokemonSelected.moves
-          .filter((e) => e.version_group_details[0].level_learned_at == 1)
+          .filter((e) => e.version_group_details[0].level_learned_at === 1)
           .map((e) =>
             fetch('https://pokeapi.co/api/v2/move/' + e.move.name).then((res) =>
               res.json(),
@@ -50,7 +50,8 @@ const BScreen = (props) => {
       setMoves(fetchedMoves);
     };
     fetchMoves();
-  }, []);
+  }, [props.pokemonSelected.moves]);
+
   return (
     <div
       style={{

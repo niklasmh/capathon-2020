@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import marker from '../resources/marker.PNG';
 
 const BScreenMenuList = (props) => {
@@ -13,7 +13,7 @@ const BScreenMenuList = (props) => {
           height: '10vw',
           width: '22vw',
           padding: '1vw',
-          display: props.phase == 3 ? 'flex' : 'grid',
+          display: props.phase === 3 ? 'flex' : 'grid',
           flexDirection: 'column',
           gridTemplateColumns: '11vw 11vw',
           gridTemplateRows: '5vw 5vw',
@@ -23,9 +23,9 @@ const BScreenMenuList = (props) => {
           columnGap: '2vw',
           position: 'relative',
         }}
-        onMouseLeave={() => props.phase == 3 && props.setPhase(2)}
+        onMouseLeave={() => props.phase === 3 && props.setPhase(2)}
       >
-        {props.phase == 3 && (
+        {props.phase === 3 && (
           <div
             className="poke-borders"
             style={{
@@ -73,7 +73,7 @@ const BScreenMenuList = (props) => {
             </div>
           </div>
         )}
-        {props.phase == 3 ? (
+        {props.phase === 3 ? (
           <React.Fragment>
             <div
               className="menu-item-battle"

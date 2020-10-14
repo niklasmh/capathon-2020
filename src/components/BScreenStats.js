@@ -73,7 +73,7 @@ const BScreenStats = (props) => (
             }}
           >
             <div
-              className={props.currentHP == 10 ? 'hp-normal-attack-ani-l' : ''}
+              className={props.currentHP === 10 ? 'hp-normal-attack-ani-l' : ''}
               style={{
                 backgroundColor: '#53cd5b',
                 height: '0.5vw',

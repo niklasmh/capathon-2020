@@ -1,7 +1,6 @@
 import React from 'react';
 import BScreenMessage from './BScreenMessage';
 import BScreenMenuList from './BScreenMenuList';
-import marker from '../resources/marker.PNG';
 import '../resources/battle.css';
 
 const phases = (props) => {
