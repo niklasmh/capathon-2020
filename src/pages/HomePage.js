@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ImageTextComp } from '../components/ImageTextComponent';
 import pokeimg from '../resources/pokemon.png';
 import flop from '../resources/meowmagi.png';
+import banner from '../pics/Pokemonbanner.png'
 import '../styles/styles.css';
 
 function HomePage(props) {
@@ -57,6 +58,9 @@ function HomePage(props) {
           and read more about our business.
         </p>
       </div>
+      <a href="Store">
+        <img src={banner}></img>
+      </a>
       <div style={{ display: "flex" }}>
         <ImageTextComp
           heading="Meowth recommends Magicarp!"
