@@ -60,7 +60,7 @@ const AboutPage = () => {
       name: "Chris Johnson",
       position: "Tester",
       imgUrl:
-        "https://www.clipartkey.com/mpngs/m/8-88479_pokemon-misty-png.png",
+        "https://scontent.fosl3-1.fna.fbcdn.net/v/t1.0-9/72314962_2383764858337970_5515805625264635904_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=h9Mp2AGRQWMAX90-rsL&_nc_ht=scontent.fosl3-1.fna&oh=0c5ce29b056a8ca66c0c73d481b872db&oe=5FAAFBD3",
     },
     {
       name: "Eirik Midtun",
