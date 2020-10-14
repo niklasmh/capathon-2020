@@ -12,7 +12,7 @@ const AboutPage = () => {
 
   // Oppgave 1: Noe rart har skjedd med overskriftene på denne siden. Finn ut hva som er galt og
   //            skriv koden som gjør at correctHeaders blir en dekodet liste med riktige overskrifter.
-  var correctHeaders = mysteryHeaders;
+  var correctHeaders = mysteryHeaders.map(atob);
 
   const badgeImageUrls = [
     "https://vignette.wikia.nocookie.net/pokemon/images/2/24/Boulderbadge.png/revision/latest/scale-to-width-down/50?cb=20100418182312",
