@@ -59,7 +59,7 @@ function HomePage(props) {
         </p>
       </div>
       <div onClick={()=>props.setValue(1)}>
-        <img src={banner}></img>
+        <img src={banner} alt="banner"></img>
       </div>
       <div style={{ display: "flex" }}>
         <ImageTextComp
