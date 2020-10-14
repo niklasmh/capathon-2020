@@ -58,9 +58,9 @@ function HomePage(props) {
           and read more about our business.
         </p>
       </div>
-      <a href="Store">
-        <img src={banner}></img>
-      </a>
+      <div onClick={()=>props.setValue(1)}>
+        <img src={banner} alt="banner"></img>
+      </div>
       <div style={{ display: "flex" }}>
         <ImageTextComp
           heading="Meowth recommends Magicarp!"
