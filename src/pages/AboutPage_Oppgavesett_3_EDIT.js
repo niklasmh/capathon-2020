@@ -1,6 +1,16 @@
 import React, {useState} from "react";
 import Magikarp from "../resources/flopping.jpg";
 import "../styles/aboutpagestyles.css";
+import styled from 'styled-components'
+
+const Badge = styled.a`
+  transition: 0.2s;
+  :hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+`
+
+const BadgeImage = styled.img``
 
 const AboutPage = () => {
   var mysteryHeaders = [
@@ -29,7 +39,11 @@ const AboutPage = () => {
   // Oppgave 3: Gjør slik at man blir viderekoblet til siden https://pokemon.fandom.com/wiki/Gym_Badges
   //            hvis man trykker på en badge.
   var badgeimages = badgeImageUrls.map((url) => {
-    return <img src={url} alt="new" className="badge-image" />;
+    return (
+      <Badge>
+        <BadgeImage src={url} alt="new" className="badge-image" />
+      </Badge>
+    );
   });
 
   // Oppgave 4: For hver person i teamet deres:
