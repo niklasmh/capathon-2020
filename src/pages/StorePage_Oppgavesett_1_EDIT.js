@@ -34,7 +34,9 @@ const StorePage = (props) => {
   //Oppgave 2:
   //Her er en påbegynt søkefunksjon, kan dere fullføre denne?
   //Hint: Komponenten Search har en prop som heter handleChange
-  function handleChange(e) {}
+  function handleChange(e) {
+    setSearchTerm(e.target.value)
+  }
 
   //Oppgave 3:
   //NBNB! SE POKEMONCARD KOMPONENT FOR OPPGAVE 3
@@ -49,7 +51,7 @@ const StorePage = (props) => {
         />
       ) : (
         <div>
-          <Search />
+          <Search handleChange={handleChange} />
           <div className="spacing">
             <h1 className="heading">Pokemon Store</h1>
             <p>
