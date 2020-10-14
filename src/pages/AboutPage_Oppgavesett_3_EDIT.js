@@ -90,7 +90,7 @@ const AboutPage = () => {
   let consultantCards = consultants.map(
     ({ name, position, imgUrl, favPokemon }) => {
       return (
-        <div className="flip-card">
+        <div className="flip-card" key={name}>
           <div className="flip-card-inner">
             <div className="flip-card-front" style={{ overflow: "hidden" }}>
               <img

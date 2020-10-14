@@ -4,7 +4,6 @@ import BScreenMenuList from "./BScreenMenuList";
 import "../resources/battle.css";
 
 const phases = (props) => {
-  console.log(props);
   switch (props.phase) {
     case 0:
       return (
