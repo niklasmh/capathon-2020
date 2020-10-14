@@ -32,12 +32,11 @@ const BuyPage = (props) => {
   const pokemonStats = () => {
     const stat_list = [];
     for (let i = 0; i < 6; i++) {
-      stat_name = pokemonArray[0]?.stats[i].stat.name;
-      stat_value = pokemonArray[0]?.stats[i].base_stat;
+      stat_name = props.pokemonSelected.stats[i].stat.name;
+      stat_value = props.pokemonSelected.stats[i].base_stat;
       console.log(stat_name, stat_value)
       //stat_list.push(stat_name, ":", stat_value);
     }
-    //setPokemonArray(stat_list);
     //console.log(pokemonArray[0]?.stats[0].stat.name, ":", pokemonArray[0]?.stats[0].base_stat)
     /* 
     Vi har fått beskjed fra brukere at stats bare viser ? i GUI.
@@ -46,6 +45,7 @@ const BuyPage = (props) => {
     ** BONUS ** 
     gjerne bruk litt styling her for å gjøre stats mer interessant
 
+    */
     const statColour = {
       hp: '#53cd5b',
       attack: '#f6de52',
@@ -54,10 +54,15 @@ const BuyPage = (props) => {
       'special-defense': '#ad62f6',
       speed: '#f06ace',
     };
-   */
+
     return (
-      <span>
-        {props.pokemonSelected.stats.map((e, i) => JSON.stringify(e))}
+      <span style={{}}>
+        {props.pokemonSelected.stats.map((e, i) => (
+
+        <p style={{color: statColour[e.stat.name]}}>{e.stat.name+": "+e.base_stat}</p>
+      ))}
+        
+ 
       </span>
     );
   };
@@ -78,8 +83,9 @@ const BuyPage = (props) => {
     til pokemonen valgt. Bruk informasjonen tilgjengelig om den
     valgte pokemonen for å lage bedre forslag for brukeren.
     foreksempel gress til gress pokemon osv. */
+    const type = props.pokemonSelected.types[0].type.name
+    fetchSuggested(setPokemonArray, type);
 
-    fetchSuggested(setPokemonArray, 'normal');
   };
 
   /* BONUS OPPGAVE */

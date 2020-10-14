@@ -40,9 +40,7 @@ const PokeInfoGrid = (props) => (
         <b>{props.pokemonSelected.base_experience} $</b>
       </h2>
       
-      {props.pokemonSelected.name}
-      {props.pokemonSelected.name}
-      
+     
     </span>
   </div>
 );
