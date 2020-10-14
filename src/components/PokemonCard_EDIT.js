@@ -13,7 +13,6 @@ const Type = styled.div`
 
 const PokemonCard = (props) => {
   const pokemonInfo = props;
-  console.log(pokemonInfo)
   return (
     <div
       className="pokeWrapper"
