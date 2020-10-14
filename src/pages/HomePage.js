@@ -49,34 +49,7 @@ function HomePage(props) {
 
   return (
     <div className="App">
-      <div className="coming-soon">
-        <h1>COMING SOON</h1>
-        <hr />
-        <div className="counter">
-          {timerComponents.length ? (
-            timerComponents
-          ) : (
-            <span>Site Completed!</span>
-          )}
-        </div>
-      </div>
-
-      <div className="paragraphContainer">
-        <p>
-          Welcome to Pokémon4Cash! Our site is currently under construction, but
-          soon you will be able to check out our Pokémon, buy your next pet and
-          read more about our business. Our dedicated team of consultants are
-          working hard to create our online store, style our web page and convey
-          information about our core business.
-          <br />
-          <br />
-          Our last consultants have left us in a bit of a pickle, however, the
-          new team will surely deliver the value we so desire. Fueled by free
-          food and beverages, they will make sure that the new page will have
-          enhanced functionality, be bug-free and be styled to the point of
-          ridiculousness. Stay tuned for more Pokémon4Cash!
-        </p>
-      </div>
+     
 
       <h1>Hello Shopper!</h1>
       <div>

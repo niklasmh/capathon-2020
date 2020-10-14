@@ -54,7 +54,7 @@ const AboutPage = () => {
       name: "Hanne Ødegård",
       position: "Developer",
       imgUrl:
-        "https://scontent.fosl3-2.fna.fbcdn.net/v/t1.0-9/34070316_1766009890159779_6558128303205515264_o.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=PLjzUkP9wWQAX_39P13&_nc_ht=scontent.fosl3-2.fna&oh=85ad731edb069f91bdaed7b130c24447&oe=5FAD5C21",
+        "https://avatars0.githubusercontent.com/u/44879629?s=460&u=338eb4a5f92af34e0f61d7e5f60c27a04c43ff28&v=4",
     },
     {
       name: "Chris Johnson",
@@ -72,7 +72,7 @@ const AboutPage = () => {
       name: "Niklas Molnes Hole",
       position: "Project leader",
       imgUrl:
-        "https://www.kindpng.com/picc/m/253-2533471_brock-pokemon-png-transparent-png.png",
+        "https://scontent.fosl3-1.fna.fbcdn.net/v/t1.15752-9/117159019_302190144169984_8996085123963486804_n.jpg?_nc_cat=108&_nc_sid=ae9488&_nc_ohc=b1kRoL5h0vIAX9ikVYp&_nc_ht=scontent.fosl3-1.fna&oh=b3605fa5d35126082a4e1c7ffc895016&oe=5FABE2F6",
     },
   ];
 
@@ -90,7 +90,7 @@ const AboutPage = () => {
                 className="flip-card-image"
               />
             </div>
-            <div className="flip-card-back">
+            <div className="flip-card-back" >
               <h1>{name}</h1>
               <h2>{position}</h2>
             </div>
