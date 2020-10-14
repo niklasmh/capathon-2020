@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/styles.css';
-import Poster from "../pics/poster.png";
+import Poster from "../pics/flyer.png";
 
 function MarketingPage(props) {
   return (
